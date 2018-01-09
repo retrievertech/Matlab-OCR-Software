@@ -1,0 +1,11 @@
+%[image, user_canceled]=imgetfile;
+%choice=imread(image);
+BWocr=im2bw(Iorig, .74);
+linese=strel('disk', 15);
+ BWocr=imopen(BWocr, linese);
+BWocr2=imcomplement(BWocr);
+BWocr2=imresize(BWocr2, .25);
+sizeBWocr2=size(BWocr2);
+BWocr2X=sizeBWocr2(2);
+BWocr2Y=.5*sizeBWocr2(1);
+BWocr3=imcrop(BWocr2, [0, 0, BWocr2X, BWocr2Y]);

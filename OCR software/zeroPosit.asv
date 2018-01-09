@@ -1,0 +1,10 @@
+xzero=[]
+yzero=[]
+for cent=1:size(circles1, 1)
+    xzero(cent, 1)=mean(circles1{cent,1}(:,2))
+    yzero(cent, 1)=mean(circles1{cent,1}
+
+    
+    
+    
+    
